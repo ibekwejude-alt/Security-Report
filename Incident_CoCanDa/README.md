@@ -1,21 +1,21 @@
 # Planet Report: Incident CoCanDa
 
 ## Technical Findings
-**Timestamp:** Mon, 25 Jan 2021 22:41:18 -0800 (PST)
+* **Timestamp:** Mon, 25 Jan 2021 22:41:18 -0800 (PST)
 
-**Target Recipient:** themajoronearth@gmail.com
+* **Target Recipient:** themajoronearth@gmail.com
 
-**Sender Spoof:** billjobs@microapple.com
+* **Sender Spoof:** billjobs@microapple.com
 
-**SPF Record:** Failed (Indicates spoofing/unauthorized sender)
+* **SPF Record:** Failed (Indicates spoofing/unauthorized sender)
 
-**IOC Domain:** pashter.com
+* **IOC Domain:** pashter.com
 
-**Reply-To:** negeja3921@pashter.com
+* **Reply-To:** negeja3921@pashter.com
 
-**Email Intent:** Declaration of War
+* **Email Intent:** Declaration of War
 
-**Payload:** PuzzleToCoCanDa.pdf (Base64 encoded; forensic analysis identified this as a disguised ZIP archive containing three hidden files detailing planetary coordinates and hostile directives).
+* **Payload:** PuzzleToCoCanDa.pdf (Base64 encoded; forensic analysis identified this as a disguised ZIP archive containing three hidden files detailing planetary coordinates and hostile directives).
 
 ## Investigation Summary
 An Earth-based Army Major received a suspicious email titled "A Hope to CoCanDa" containing a disguised ZIP payload. Analysis revealed the true sender to be threat actor Pestero Negeja, operating out of The Martian Colony near the Interplanetary Spaceport. The hidden files confirm an imminent act of war against the CoCanDa people. The current proof of life for the kidnapped President's daughter and other abducted citizens remains unverified.
