@@ -30,7 +30,8 @@ Pivoting on the alerted FormBook C2 IPs (`172.64.155.76`, `146.59.71.167`, `38.1
 ### 2. Active Directory Attribution
 Filtering Kerberos authentication traffic (`ip.addr == 172.16.8.49 && kerberos.CNameString`) revealed the machine account `DESKTOP-5NLV63K$` and user account `rvance` authenticating against the Domain Controller (`172.16.8.8`)[cite: 5]. Because LDAP traffic was encrypted (`SASL GSS-API Privacy`)[cite: 6], UTF-16LE string extraction (`strings -el`) was used on REMnux to recover the user's full name: **Raymond Vance**[cite: 8].
 
-![Kerberos and User Attribution](screenshots/02-victim-attribution.png)
+![Kerberos Host and Username Attribution](screenshots/02a-kerberos.png)
+![UTF-16LE Full Name Extraction](screenshots/02b-strings.png)
 
 ### 3. Active Data Exfiltration (`POST` Traffic)
 Expanding the filter to all outbound HTTP requests (`ip.src == 172.16.8.49 && http.request`) uncovered bursts of `POST` requests (`application/x-www-form-urlencoded`, 725–1,429 bytes) starting at `02:13:23 UTC`[cite: 9]. This behavior indicates active exfiltration of stolen host data (credentials, keystrokes, clipboard contents) paired with periodic `GET` check-ins[cite: 9, 13].
